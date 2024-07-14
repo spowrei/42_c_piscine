@@ -1,0 +1,7 @@
+{
+	"editor.insertSpaces": false,
+	"editor.comments.insertSpace": false,
+	"files.associations": {
+		"stdio.h": "c"
+	}
+}
