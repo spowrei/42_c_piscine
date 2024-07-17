@@ -9,7 +9,6 @@ int ft_fibonacci(int index)
 	ix_b = 0;
 	if (index < 0)
 		return (-1);
-	
 
 	return 
 }
