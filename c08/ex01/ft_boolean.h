@@ -11,6 +11,6 @@ typedef int t_bool;
 # define EVEN_MSG "I have an even number of arguments.\n"
 # define ODD_MSG "I have an odd number of arguments.\n"
 
-# define EVEN(m) ((m % 2) == 0)
+#define EVEN(x) ((x % 2 == 0) ? TRUE : FALSE)
 
 #endif
