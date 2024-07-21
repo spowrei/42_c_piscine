@@ -43,7 +43,7 @@ char *ft_strjoin(int size, char **strs, char *sep)
 
 int main()
 {
-	char *yazi[10] = {"Mustafa", "Kaplan", "Brrr"}; // neden yazi[][] olmuyor
+	char *yazi[10] = {"Mustafa", "Kaplan", "Brrr"};
 	char *p;
 
 	p = ft_strjoin(100, yazi, "-");

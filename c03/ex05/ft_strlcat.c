@@ -1,25 +1,42 @@
 // #include <unistd.h>
 #include <stdio.h>
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+// size yeterli ise döndürülen değer:		strlen(dest) + strlen(src)		||	
+// size yeterli değilse, döndürülen değer:	size + strlen(src)				||	
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int ix;
-	int ix2;
+	unsigned int	d_len;
+	unsigned int	s_len;
+	unsigned int	i;
+	unsigned int	j;
 
-	ix = 0;
-	ix2 = 0;
-	while (*(dest + ix) != '\0')
+	d_len = ft_strlen(dest);
+	s_len = ft_strlen(src);
+	i = 0;
+	j = d_len;
+	
+	if (size <= d_len)
+		return (s_len + size);
+	while (src [i] != '\0' && j < size - 1)
 	{
-		ix++;
+		dest[j] = src[i];
+		i++;
+		j++;
 	}
-	while (ix + ix2 < size - 1 && *(src + ix2) != '\0')
-	{
-		*(dest + ix + ix2) = *(src + ix2);
-		ix2++;
-	}
-	*(dest + ix + ix2) = '\0';
-
-	return (ix + ix2);
+	dest[j] = '\0';
+	return (d_len + s_len);
 }
 
 int main()

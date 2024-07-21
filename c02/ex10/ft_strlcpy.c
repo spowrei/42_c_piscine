@@ -15,6 +15,8 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 		index++;
 	}
 
+	dest[size-1] = '\0';
+
 	// strlcpy fonksiyonunun dönüş değeri, kaynak dizinin (src) uzunluğunu döner. Bu, hedef diziye (dest) kaç karakterin kopyalandığından bağımsızdır.
 	return (index);
 	

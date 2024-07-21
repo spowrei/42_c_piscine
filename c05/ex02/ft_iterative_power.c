@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/20 20:39:25 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/20 20:39:28 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_iterative_power(int nb, int power)
 {
@@ -10,15 +20,5 @@ int	ft_iterative_power(int nb, int power)
 		number *= nb;
 		power--;
 	}
-
 	return (number);
-}
-
-
-
-int main()
-{
-	printf("%d", ft_iterative_power(2,5));
-
-	return 0;
 }
