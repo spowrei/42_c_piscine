@@ -1,36 +1,32 @@
-#include <unistd.h> //s1-s2
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/20 16:45:38 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/20 16:48:16 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-	int index = 0;
-	int index2 =0;
+	int	index;
+	int	index2;
 
-	while(*(dest+index)!='\0')
+	index = 0;
+	index2 = 0;
+	while (*(dest + index) != '\0')
 	{
 		index++;
 	}
-
-	while(*(src+index2)!='\0')
+	while (*(src + index2) != '\0')
 	{
-		*(dest+index) = *(src+index2);
-
+		*(dest + index) = *(src + index2);
 		index++;
 		index2++;
 	}
-	*(dest+index) = '\0';
-
+	*(dest + index) = '\0';
 	return (dest);
-}
-
-int main(void)
-{
-	char isim[50]="Mustafa ";
-	char soyisim[10]="Kaplan";
-
-	ft_strcat(isim,soyisim);
-
-	printf("%s", isim);
-
-    return (0);
 }

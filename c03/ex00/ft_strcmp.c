@@ -1,23 +1,23 @@
-#include <unistd.h> //s1-s2
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/20 11:29:15 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/20 16:48:29 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int index =0;
+	int	index;
 
-	while (*(s1 + index) != '\0' && *(s2 + index) != '\0')
+	index = 0;
+	while (s1[index] != '\0' && s2[index] != '\0' && s1[index] == s2[index])
 	{
-		if	(*(s1 + index) != *(s2 + index))
-		{
-			break;
-		}
 		index++;
 	}
-	return (*(s1 + index) - *(s2 + index));
-}
-
-int main(void)
-{
-	printf("%d",ft_strcmp("abc","ab"));
-    return (0);
+	return (s1[index] - s2[index]);
 }

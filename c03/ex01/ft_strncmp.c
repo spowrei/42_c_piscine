@@ -3,38 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mukaplan <mkaplan2005@gmail.com>           +#+  +:+       +#+        */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 12:57:21 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/08 14:46:44 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/20 16:49:32 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> //s1-s2
-#include <stdio.h>
-
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int index =0;
+	unsigned int	i;
 
-	while (*(s1 + index) != '\0' && *(s2 + index) != '\0' && index < n)
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] != '\0' && s2[i] != '\0' && i < n - 1 && s1[i] == s2[i])
 	{
-		if	(*(s1 + index) != *(s2 + index))
-		{
-			return (*(s1 + index) - *(s2 + index));
-		}
-
-		index++;
-		
+		i++;
 	}
-
-	index--;
-	
-	return (*(s1 + index) - *(s2 + index));
-}
-
-int main(void)
-{
-	printf("%d",ft_strncmp("abcd","abc",3));
-    return (0);
+	return (s1[i] - s2[i]);
 }

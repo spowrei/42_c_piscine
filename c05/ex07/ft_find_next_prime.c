@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/20 16:46:38 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/21 17:00:23 by mukaplan         ###   ########.fr       */
+/*   Created: 2024/07/21 13:22:47 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/21 13:26:37 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_is_prime(int nb)
 {
 	int	i;
-	int	j;
 
-	i = 0;
-	j = 0;
-	if (to_find[j] == '\0')
-		return (str);
-	while (str[i] != '\0')
+	i = 2;
+	if (nb <= 1)
+		return (0);
+	while (i <= (nb / 2))
 	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0')
-			j++;
-		if (to_find[j] == '\0')
-			return (str + i);
-		i++;
-		j = 0;
+		if ((nb % i) == 0)
+			return (0);
+		else
+			i ++;
 	}
-	return (0);
+	return (1);
+}
+
+int ft_find_next_prime(int nb)
+{
+	while (ft_is_prime(nb)==0)
+	{
+		nb++;
+	}
+	return (nb);
 }

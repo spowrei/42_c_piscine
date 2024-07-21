@@ -1,5 +1,14 @@
-// #include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/20 17:13:24 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/21 11:34:56 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
@@ -13,8 +22,6 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-// size yeterli ise döndürülen değer:		strlen(dest) + strlen(src)		||	
-// size yeterli değilse, döndürülen değer:	size + strlen(src)				||	
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	d_len;
@@ -26,7 +33,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	s_len = ft_strlen(src);
 	i = 0;
 	j = d_len;
-	
 	if (size <= d_len)
 		return (s_len + size);
 	while (src [i] != '\0' && j < size - 1)
@@ -37,12 +43,4 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	}
 	dest[j] = '\0';
 	return (d_len + s_len);
-}
-
-int main()
-{
-	char src[50] = "Mustafa013456789";
-	printf("%d", ft_strlcat(src, " Kaplan", 50));
-	printf("\n%s", src);
-	return 0;
 }
