@@ -111,12 +111,12 @@ int ft_atoi_base(char *str, char *base)
     if (ft_base_is_okay(base) == 0)
         return (0);
 
-    ft_putnbr_base(ft_atoi(str),base);
+    ft_putnbr_base(ft_atoi(str), base);
 }
 
 int main()
 {
-    ft_atoi_base("      ---12grrg3", "0123456789");
+    printf(ft_atoi_base("   ---12345", "0123456789"));
 
     return 0;
 }

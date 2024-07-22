@@ -1,5 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/22 11:41:06 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/22 11:48:41 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int ft_strlen(char *str)
@@ -69,7 +79,7 @@ void ft_putnbr_base(int nbr, char *base)
     }
 }
 
-int main()
+int main(int ac)
 {
     ft_putnbr_base(-123, "0123456789");
 
