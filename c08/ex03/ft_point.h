@@ -6,6 +6,7 @@ typedef struct s_point
     int x;
     int y;
 } t_point;
+//* t_point = struct s_point
 
 void set_point(t_point *point);
 

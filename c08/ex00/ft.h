@@ -52,4 +52,4 @@ int ft_strcmp(char *s1, char *s2)
 	return (*(s1 + index) - *(s2 + index));
 }
 
-#endif // FT_H
+#endif
