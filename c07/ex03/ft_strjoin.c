@@ -1,10 +1,21 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/24 01:34:09 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/24 01:34:44 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-void ft_strcat(char *dest, char *src)
+void	ft_strcat(char *dest, char *src)
 {
-	int index;
-	int index2;
+	int	index;
+	int	index2;
 
 	index = 0;
 	index2 = 0;
@@ -20,10 +31,10 @@ void ft_strcat(char *dest, char *src)
 	dest[index + index2] = '\0';
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	char *ptr;
-	int i;
+	char	*ptr;
+	int		i;
 
 	if (size < 1)
 	{
@@ -43,14 +54,4 @@ char *ft_strjoin(int size, char **strs, char *sep)
 		i++;
 	}
 	return (ptr);
-}
-
-int main()
-{
-	char *p;
-	char *yazi[10] = {"Mustafa", "Kaplan", "Brrr"};
-
-	p = ft_strjoin(100, yazi, ".*.");
-	printf("%s", p);
-	free(p);
 }

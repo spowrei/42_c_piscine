@@ -1,9 +1,20 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/24 01:31:17 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/24 01:31:17 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -11,10 +22,10 @@ int ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-	int index;
-	char *p;
+	int		index;
+	char	*p;
 
 	p = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (p == NULL)
@@ -27,12 +38,4 @@ char *ft_strdup(char *src)
 	}
 	p[index] = src[index];
 	return (p);
-}
-
-int main()
-{
-	char *ptr;
-	ptr = ft_strdup("Mustafa");
-	printf("%s", ptr);
-	free(ptr);
 }
