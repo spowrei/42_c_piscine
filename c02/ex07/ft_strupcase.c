@@ -1,24 +1,27 @@
-#include <unistd.h> 
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 13:55:06 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/15 13:55:30 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-	int index =0;
-	while (*(str+index)!='\0')
+	int	index;
+
+	index = 0;
+	while (*(str + index) != '\0')
 	{
-		if(*(str+index)>='a' && *(str+index)<='z')
+		if (*(str + index) >= 'a' && *(str + index) <= 'z')
 		{
-			*(str+index)-=32;
+			*(str + index) -= 32;
 		}
-		index ++;
+		index++;
 	}
-
-	return	(str);
-}
-
-int main(void)
-{
-	char isim[] = "mustafa"; // char *isim olarak kullandığımda hata verdi sebebini öğren
-	printf("___%s",ft_strupcase(isim));
-    return (0);
+	return (str);
 }

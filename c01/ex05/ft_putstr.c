@@ -1,18 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/14 19:24:00 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/14 19:53:19 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-	int index =0;
-	while (*(str+index)!='\0')
+	int	index;
+
+	index = 0;
+	while (*(str + index) != '\0')
 	{
-		write (1,(str+index),1);
+		write(1, (str + index), 1);
 		index++;
 	}
-}
-
-int main(void)
-{
-	ft_putstr("mustafa");
-
-    return (0);
 }

@@ -1,21 +1,23 @@
-#include <unistd.h>
-#include <stdio.h> 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/14 19:25:59 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/14 19:26:15 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int lenght =0;
+	int	lenght;
 
-	while (str[lenght]!='\0')
+	lenght = 0;
+	while (str[lenght] != '\0')
 	{
 		lenght++;
 	}
-
 	return (lenght);
-}
-
-int main(void)
-{
-	printf("%d",ft_strlen("1234567891234567890"));
-
-    return (0);
 }

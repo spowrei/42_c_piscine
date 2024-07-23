@@ -1,37 +1,35 @@
-#include <unistd.h> // 48 = 0  // 57 b= 9
-#include <stdio.h> // !!!!!!!! negatif sayılar için düzenleeeee!!!
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mkaplan2005@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/09 17:46:47 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/09 17:49:13 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putnbr(int nb)
+#include <unistd.h> 
+
+void	ft_putnbr(int nb)
 {
-	int reversed_nb=0;
-	int temp = nb;
-	char output = 48;
+	char	output;
 
-	while(temp>=1)
+	if (nb == -2147483648)
 	{
-		reversed_nb+=temp%10;
-		reversed_nb*=10;
-		temp/=10;
+		write(1, "-2", 2);
+		nb = 147483648;
 	}
-	reversed_nb/=10;
-
-	while (reversed_nb>=1)
+	if (nb < 0)
 	{
-		output = 48;
-		output += reversed_nb%10;
-		write(1,&output,1);
-		reversed_nb/=10;
+		write(1, "-", 1);
+		nb = -nb;
 	}
-	
-
+	if (nb > 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	output = '0' + (nb % 10);
+	write(1, &output, 1);
 }
-
-int main(void)
-{
-	ft_putnbr(205678);
-
-
-return (0);
-}
-
-// 48 + rakamın gerçek değeri = rakamın ascii değeri

@@ -1,32 +1,26 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/14 19:27:42 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/14 19:52:49 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int temp;
-	int index=size-1;
+	int	temp;
+	int	index;
 
-	while (index >= size/2 )
+	index = size - 1;
+	while (index >= size / 2)
 	{
-		temp=*(tab+index);
-		*(tab+index)=*(tab+size -index-1);
-		*(tab+size -index-1)=temp;
-		
+		temp = *(tab + index);
+		*(tab + index) = *(tab + size - index - 1);
+		*(tab + size - index - 1) = temp;
 		index--;
 	}
-}
-
-int main(void)
-{
-	int k[]={1,2,3,4,5,6,7,8,9};
-	int size = 9;
-	ft_rev_int_tab(k,size);
-
-for (int i = 0; i < size; i++)
-{
-	printf("%d",k[i]);
-}
-
-	
-    return (0);
 }

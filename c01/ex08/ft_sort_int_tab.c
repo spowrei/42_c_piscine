@@ -1,41 +1,33 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/14 19:28:31 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/14 19:52:17 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-void  ft_sort_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int temp;
-	int index=0;
+	int	temp;
+	int	index;
 
-	while (index<size-1)
+	index = 0;
+	while (index < size - 1)
 	{
-		if (*(tab+index) > *(tab+index+1))
+		if (*(tab + index) > *(tab + index + 1))
 		{
-			temp=*(tab+index);
-			*(tab+index)=*(tab+index+1);
-			*(tab+index+1)=temp;
-
-			index =0;
+			temp = *(tab + index);
+			*(tab + index) = *(tab + index + 1);
+			*(tab + index + 1) = temp;
+			index = 0;
 		}
-		else 
+		else
 		{
 			index++;
 		}
-
 	}
-}
-
-int main(void)
-{
-	int k[]={5,4,2,3,7,8,9,1,5};
-	int size = 9;
-	ft_sort_int_tab(k,size);
-
-for (int i = 0; i < size; i++)
-{
-	printf("%d",k[i]);
-}
-
-
-    return (0);
 }

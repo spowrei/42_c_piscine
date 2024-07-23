@@ -1,34 +1,32 @@
-#include <unistd.h> // strcpy --> 1,2,3,4,5,\0,\0,\0   dizinin geri kalanını null karakterle doldurmalı??
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 10:40:21 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/15 10:41:53 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+#include <unistd.h>
+
+// strcpy --> 1,2,3,4,5,\0,\0,\0   dizinin geri kalanını null
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int	i;
 
-	// index sınıra gelmediyse ve kaynak stringin sonuna gelinmediyse
+	i = 0;
 	while (i < n && src[i] != '\0')
 	{
-		*(dest+i)=*(src+i);
+		*(dest + i) = *(src + i);
 		i++;
 	}
-
-	// kaynak string bittikten sonra hedef klasör istenilen yere kadar null karakter doldurulurs
 	while (i < n)
-    {
-        dest[i] = '\0';
-        i++;
-    }
-
-
-	return dest;
-}
-
-int main(void)
-{
-	char *isim = "mustafa kaplan";
-	char kal[30];
-
-	ft_strncpy(kal,isim,25);
-	write(1,kal,30);
-
-    return (0);
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
