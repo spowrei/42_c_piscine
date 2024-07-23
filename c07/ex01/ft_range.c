@@ -7,16 +7,20 @@ int *ft_range(int min, int max)
 	int size;
 	int index;
 
-	if (min >= max)
+	size = max - min;
+
+	if (size < 1)
 		return (NULL);
 
-	size = max - min;
-	p = (int *)malloc(size*4);
+	p = (int *)malloc(sizeof(int) * (size));
+
+	if (p == NULL)
+		return (NULL);
 
 	index = 0;
 	while (index < size)
 	{
-		p[index] = min + index;
+		p[index] = index + min;
 		index++;
 	}
 
@@ -25,17 +29,20 @@ int *ft_range(int min, int max)
 
 int main()
 {
-	int *sayilar;
+	int *ptr;
 	int index;
-	
-	sayilar = ft_range(4,21);
+	int min = 5;
+	int max = 12;
+
+	ptr = ft_range(min, max);
+
 	index = 0;
-	while (sayilar[index])
+	while (index < max - min)
 	{
-		printf("%d, ",sayilar[index]);
+		printf("%d, ", ptr[index]);
 		index++;
 	}
 
-	free(sayilar);	
+	free(ptr);
 	return 0;
 }

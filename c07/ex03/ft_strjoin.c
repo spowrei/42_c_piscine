@@ -22,34 +22,35 @@ void ft_strcat(char *dest, char *src)
 
 char *ft_strjoin(int size, char **strs, char *sep)
 {
-	char *output_str;
-	int index;
+	char *ptr;
+	int i;
 
-	output_str = (char *)malloc(size);
-	*output_str = '\0';
-
-	index = 0;
-	while (*(strs + index) != NULL)
+	if (size < 1)
 	{
-		ft_strcat(output_str, *(strs + index));
-		index++;
-		if (*(strs + index) != NULL)
-			ft_strcat(output_str, sep);
+		ptr = (char *)malloc(sizeof(char));
+		if (ptr)
+			*ptr = '\0';
+		return (ptr);
 	}
-
-
-	return (output_str);
+	ptr = (char *)malloc(size * sizeof(char));
+	ptr[0] = '\0';
+	i = 0;
+	while (strs[i] != NULL)
+	{
+		ft_strcat(ptr, strs[i]);
+		if (strs[i + 1] != NULL)
+			ft_strcat(ptr, sep);
+		i++;
+	}
+	return (ptr);
 }
 
 int main()
 {
-	char *yazi[10] = {"Mustafa", "Kaplan", "Brrr"};
 	char *p;
+	char *yazi[10] = {"Mustafa", "Kaplan", "Brrr"};
 
-	p = ft_strjoin(100, yazi, "-");
-
-	printf("%s",p);
-	
+	p = ft_strjoin(100, yazi, ".*.");
+	printf("%s", p);
 	free(p);
-	return 0;
 }

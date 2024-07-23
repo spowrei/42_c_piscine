@@ -1,42 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
 char *ft_strdup(char *src)
 {
+	int index;
 	char *p;
-	int i = 0;
 
-	int size = 0;
-    while (src[size] != '\0')
-    {
-        size++;
-    }
-
-	p = (char *)malloc(size + 1);
-
+	p = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (p == NULL)
-    {
-        return NULL; // Bellek tahsisi başarısız oldu
-    }
-
-	while (src[i] != '\0')
+		return (NULL);
+	index = 0;
+	while (src[index] != '\0')
 	{
-		p[i] = src[i];
-		i++;
+		p[index] = src[index];
+		index++;
 	}
-	p[i] = '\0';
-
+	p[index] = src[index];
 	return (p);
 }
 
 int main()
 {
-	char *original = "Mustafa";
-	char *p;
-
-	p = ft_strdup(original);
-	printf("%s",p);
-
-	free(p);
-	return 0;
+	char *ptr;
+	ptr = ft_strdup("Mustafa");
+	printf("%s", ptr);
+	free(ptr);
 }
