@@ -6,11 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 20:36:53 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/20 20:36:54 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/22 14:52:30 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);

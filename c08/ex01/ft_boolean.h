@@ -6,14 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 12:03:24 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/25 12:51:22 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/25 19:57:28 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BOOLEAN_H
 # define FT_BOOLEAN_H
-
-# include <unistd.h>
 
 typedef int	t_bool;
 # define TRUE 1

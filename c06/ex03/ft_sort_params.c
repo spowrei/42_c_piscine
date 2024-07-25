@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 23:25:13 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/21 23:25:13 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/22 19:43:02 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,16 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[index] - s2[index]);
 }
 
-void ft_sort(int argc, char **argv)
+void	ft_sort(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
-	while (i < argc-1)
+	while (i < argc - 1)
 	{
-		if(ft_strcmp(argv[i],argv[i+1]) > 0)
+		if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 		{
-			ft_strswap(&argv[i], &argv[i+1]);
+			ft_strswap(&argv[i], &argv[i + 1]);
 			i = 0;
 		}
 		i++;
@@ -51,8 +51,8 @@ void ft_sort(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	ft_sort(argc, argv);
 	i = 1;
@@ -67,5 +67,5 @@ int	main(int argc, char **argv)
 		write(1, "\n", 1);
 		i++;
 	}
-	return 0;
+	return (0);
 }

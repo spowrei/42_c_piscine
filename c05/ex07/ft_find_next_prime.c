@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 13:22:47 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/21 13:26:37 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/22 14:55:13 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int	ft_is_prime(int nb)
 		if ((nb % i) == 0)
 			return (0);
 		else
-			i ++;
+			i++;
 	}
 	return (1);
 }
 
-int ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
-	while (ft_is_prime(nb)==0)
+	while (ft_is_prime(nb) == 0)
 	{
 		nb++;
 	}

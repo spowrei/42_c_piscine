@@ -6,14 +6,14 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 12:13:28 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/21 12:19:40 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:18:57 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	index;
-	int	b;
+	int			index;
+	long int	b;
 
 	b = nb;
 	if (b <= 0)

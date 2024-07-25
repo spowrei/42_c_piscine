@@ -6,10 +6,11 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 13:07:33 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/25 13:58:45 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/25 16:49:44 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "ft_stock_str.h"
 
 int	ft_strlen(char *str)

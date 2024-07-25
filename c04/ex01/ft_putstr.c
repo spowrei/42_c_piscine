@@ -6,11 +6,12 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 11:37:33 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/22 11:37:46 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/22 11:51:55 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	int	i;

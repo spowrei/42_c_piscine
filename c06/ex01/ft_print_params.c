@@ -6,7 +6,7 @@
 /*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 23:24:59 by mukaplan          #+#    #+#             */
-/*   Updated: 2024/07/21 23:24:59 by mukaplan         ###   ########.fr       */
+/*   Updated: 2024/07/22 19:39:38 by mukaplan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
-	
+
 	i = 1;
 	while (i < argc)
 	{
