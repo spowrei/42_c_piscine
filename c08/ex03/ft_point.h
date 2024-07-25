@@ -1,13 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/25 13:40:53 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/25 14:04:51 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
 typedef struct s_point
 {
-    int x;
-    int y;
-} t_point;
-//* t_point = struct s_point
-
-void set_point(t_point *point);
+	int	x;
+	int	y;
+}	t_point;
 
 #endif

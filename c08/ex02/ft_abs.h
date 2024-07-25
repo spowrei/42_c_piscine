@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/25 12:04:22 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/25 12:50:50 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_ABS_H
-#define FT_ABS_H
-// ? şart sağlanırsa
-// : şart sağlanmazsa
-#define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
+# define FT_ABS_H
+
+# define ABS(Value) ((Value >= 0) * (Value) + (Value < 0) * (-Value))
 
 #endif

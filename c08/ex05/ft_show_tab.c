@@ -1,11 +1,20 @@
-#include <stdlib.h>
-#include <unistd.h>
-#include "../ex04/ft_strs_to_tab.c"
-#include "ft_stock_str.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_show_tab.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukaplan <mukaplan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/25 13:20:09 by mukaplan          #+#    #+#             */
+/*   Updated: 2024/07/25 13:40:11 by mukaplan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putstr(char *str)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -15,9 +24,9 @@ void ft_putstr(char *str)
 	}
 }
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-	char c;
+	char	c;
 
 	if (nb == -2147483648)
 	{
@@ -42,9 +51,9 @@ void ft_putnbr(int nb)
 	}
 }
 
-void ft_show_tab(struct s_stock_str *par)
+void	ft_show_tab(struct s_stock_str *par)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (par[i].str != 0)
@@ -57,9 +66,4 @@ void ft_show_tab(struct s_stock_str *par)
 		write(1, "\n", 1);
 		i++;
 	}
-}
-
-int main(int ac, char **av)
-{
-	ft_show_tab(ft_strs_to_tab(ac, av));
 }
